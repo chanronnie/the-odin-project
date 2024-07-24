@@ -27,13 +27,34 @@
       <div class="container navbar-flex">
         <h3>Odin.Recipes</h3>
 
-        <ul class="main-menu-list">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#recipes">Recipes</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <!-- Desktop Menu -->
+        <div class="main-menu">
+          <ul class="main-menu-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#recipes">Recipes</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+          <!-- Hamburger Button -->
+          <div class="mobile-menu-toggle">
+            <i class="fas fa-bars fa-2x"></i>
+          </div>
+          <div class="mobile-menu-items" id="mobile-menu-items">
+            <ul class="mobile-menu-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#recipes">Recipes</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </nav>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>
