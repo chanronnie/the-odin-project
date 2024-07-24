@@ -41,3 +41,34 @@ ul {
 img {
   max-width: 100%;
 }
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+}
+
+.container-sm {
+  max-width: 1100px;
+}
+
+/* Navbar */
+.navbar h3 {
+  font-weight: 800px;
+  text-transform: uppercase;
+}
+
+.navbar .navbar-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .main-menu-list {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-text-color);
+}
