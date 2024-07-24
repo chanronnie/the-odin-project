@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-text-color: #393e46;
+  --primary-color: #fff;
+  --secondary-color: #6d9886;
+  --tertiary-color: #f2e7d5;
+  --newsletter-color: #d3e0db;
+}
+
+/* Basic Styling */
+html,
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.6;
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: var(---primary-text-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
