@@ -316,8 +316,13 @@ footer {
   margin: 1rem auto;
 }
 
+.footer-grid a,
+.footer-grid .social-icons i {
+  color: var(--light-color);
+}
+
 .footer-grid a:hover,
-.footer-grid i:hover {
+.footer-grid .social-icons i:hover {
   color: var(--secondary-color);
 }
 
@@ -351,7 +356,7 @@ footer {
 
 .footer-grid .newsletter-button {
   background-color: var(--dark-color);
-  color: var(--newsletter-color);
+  color: var(--light-color);
   border: 1px solid var(--dark-color);
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -359,7 +364,7 @@ footer {
 
 .footer-grid .newsletter-button:hover {
   background-color: transparent;
-  border: 1px solid var(--newsletter-color);
+  border: 1px solid var(--tertiary-color);
 }
 
 /* Copyright */
