@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Odin Recipes | Strawberry Salad</title>
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="home">
+      <div class="container navbar-flex">
+        <h3>Odin.Recipes</h3>
+
+        <!-- Desktop Menu -->
+        <div class="main-menu">
+          <ul class="main-menu-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#recipes">Recipes</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+          <!-- Hamburger Button -->
+          <div class="mobile-menu-toggle">
+            <i class="fas fa-bars fa-2x"></i>
+          </div>
+          <div class="mobile-menu-items" id="mobile-menu-items">
+            <ul class="mobile-menu-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#recipes">Recipes</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="horizontal-line"></div>
+
+    <!-- Header -->
+    <header class="container hero-recipe">
+      <div class="hero-header">
+        <h1>Summer Strawberry Salad</h1>
+      </div>
+      <div class="hero-image">
+        <img src="../images/strawberry-salad.jpg" alt="strawberry-salad" />
+      </div>
+      <div class="preview">
+        <p>
+          <i class="fa-regular fa-user"></i> 4 Servings
+          <i class="fa-regular fa-clock"></i> 25 minutes
+        </p>
+      </div>
+    </header>
+
+    <!-- Recipe -->
+    <section class="container recipe-details">
+      <!-- Ingredients -->
+      <section class="ingredients">
+        <h2>Ingredients</h2>
+        <ul>
+          <li>1 ½ cups walnut pieces</li>
+          <li>1 pint strawberries, quartered</li>
+          <li>1 (10 ounce) bag iceberg salad</li>
+          <li>1 (5 ounce) bag baby spinach</li>
+          <li>1 (4 ounce) container crumbled feta cheese</li>
+          <li>1 small red onion, thinly sliced into rings</li>
+          <li>freshly ground black pepper to taste</li>
+        </ul>
+      </section>
+
+      <!-- Instructions -->
+      <section class="instructions">
+        <h2>Instructions</h2>
+        <ol>
+          <li>
+            Preheat the oven to 350 degrees F (175 degrees C). Spread walnuts on
+            a baking sheet.
+          </li>
+          <li>
+            Toast in preheated oven until walnuts start to turn golden brown and
+            become fragrant, 5 to 7 minutes. Let cool, about 5 minutes.
+          </li>
+          <li>
+            Toss toasted walnuts, strawberries, iceberg lettuce, baby spinach,
+            feta cheese, red onion, and black pepper together in a large bowl.
+          </li>
+        </ol>
+      </section>
+    </section>
+
+    <!-- Tag Recipe -->
+    <section class="container container-sm tag-recipe">
+      <i class="fa-brands fa-instagram fa-2x"></i>
+      <div class="tag-content">
+        <h2>Did you make this recipe?</h2>
+        <p>
+          Tag <strong>@odinrecipes</strong> on Instagram so we can admire your
+          masterpiece!
+        </p>
+      </div>
+    </section>
+
+    <!-- Comment -->
+    <section class="container container-sm comment">
+      <div class="comment-body">
+        <h2>Leave a comment</h2>
+        <p>
+          I love hearing from you! Submit your question or review below. Your
+          email address will not be published. Required fields are marked*.
+        </p>
+        <form>
+          <textarea
+            name="comment"
+            id="comment"
+            placeholder="Enter your comment!"
+          ></textarea>
+          <div class="comment-inputs">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name*"
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email*"
+            />
+          </div>
+          <button type="submit" class="btn btn-reverse">Post Comment</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Recipe Page Navigation -->
+    <section class="container pages-nav">
+      <div class="prev-page">
+        <a href="./quesadilla.html"
+          ><p>Previous</p>
+          <p>Easy Quesadilla</p>
+        </a>
+      </div>
+      <div class="next-page">
+        <a href="./shakshuka.html"
+          ><p>Next</p>
+          <p>Simplified Shakshuka</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="#contact">
+      <div class="container footer-grid">
+        <!-- Left Footer -->
+        <div class="logo">
+          <h2>Odin.Recipes</h2>
+          <p>
+            The Odin Recipes is a project I built to learn HTML, CSS, and
+            JavaScript during my journey with The Odin Project.
+          </p>
+
+          <!-- Social -->
+          <div class="social">
+            <ul class="social-icons">
+              <li>
+                <a href="https://facebook.com" target="_blank">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://pinterest.com" target="_blank">
+                  <i class="fa-brands fa-pinterest"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/chanronnie" target="_blank">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#recipes">Recipes</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="newsletter">
+          <h4 class="footer-title">Newsletter</h4>
+          <p>Subscribe to our newsletter and get smart nutritious recipes.</p>
+          <form>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+            />
+            <button type="submit" class="newsletter-button">Submit</button>
+          </form>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright">
+          <p>
+            &copy; 2024 Odin Recipes - Made with
+            <i class="fa-solid fa-heart"></i> by
+            <span class="external-link"
+              ><a href="https://github.com/chanronnie" target="_blank"
+                >Ronnie Chan</a
+              ></span
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
