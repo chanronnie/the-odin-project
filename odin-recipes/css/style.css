@@ -422,6 +422,44 @@ i.fa-heart {
   margin-bottom: 1rem;
 }
 
+/* Recipe Details*/
+.recipe-details {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.recipe-details h2 {
+  margin-bottom: 1.5rem;
+}
+
+.recipe-details li {
+  margin-bottom: 0.7rem;
+}
+
+.recipe-details .ingredients,
+.recipe-details .instructions {
+  margin-bottom: 2.5rem;
+  flex: 1;
+}
+
+/* Instructions */
+.recipe-details ol {
+  padding-left: 0.6rem;
+}
+
+.recipe-details ol li::marker {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  content: counter(list-item);
+  margin-left: 2rem;
+}
+
+.recipe-details ol li {
+  padding-left: 1.5rem;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
   .navbar .main-menu {
