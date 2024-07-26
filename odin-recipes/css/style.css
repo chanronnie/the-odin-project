@@ -68,6 +68,36 @@ img {
   background-color: transparent;
 }
 
+.btn-reverse {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.btn-reverse:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.section-title {
+  margin: 3rem auto 0.5rem;
+}
+
+.divider-line {
+  width: 5rem;
+  height: 0.1rem;
+  background-color: var(--dark-color);
+  margin-bottom: 1rem;
+}
+
+.external-link a {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.external-link a:hover {
+  color: var(--dark-color);
+}
+
 /* Navbar */
 .navbar {
   position: relative;
@@ -152,6 +182,31 @@ img {
 .hero .hero-content p {
   margin-bottom: 1.3rem;
   font-size: 1.4rem;
+}
+
+/* About */
+.about {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 5rem 7rem;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.about-content .divider-line {
+  background-color: var(--primary-color);
+}
+
+.about-content h3 {
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  margin-bottom: 1.2rem;
 }
 
 /* Media Queries */
