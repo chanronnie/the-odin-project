@@ -261,6 +261,119 @@ img {
   }
 }
 
+/* Footer */
+footer {
+  height: 265px;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+.footer-grid .logo {
+  grid-area: logo;
+}
+.footer-grid .quick-links {
+  grid-area: quick-links;
+}
+.footer-grid .newsletter {
+  grid-area: newsletter;
+}
+.footer-grid .copyright {
+  grid-area: copyright;
+}
+
+.footer-grid {
+  font-size: 0.8rem;
+  display: grid;
+  grid-template-areas:
+    "logo quick-links newsletter"
+    "copyright copyright copyright";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto-fit);
+  column-gap: 4rem;
+  row-gap: 1rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 2rem;
+}
+
+.footer-grid .social-icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  color: var(--light-color);
+  font-size: 1.2rem;
+}
+
+.footer-grid .footer-title {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.footer-grid p,
+.footer-grid .quick-links ul {
+  margin: 1rem auto;
+}
+
+.footer-grid a:hover,
+.footer-grid i:hover {
+  color: var(--secondary-color);
+}
+
+/* Newsletter */
+.footer-grid .newsletter input,
+.footer-grid .newsletter-button {
+  padding: 0.5rem;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+}
+
+.footer-grid .newsletter input {
+  background-color: var(--tertiary-color);
+  border: 1px solid var(--tertiary-color);
+  color: var(--primary-color);
+  width: 75%;
+}
+
+.footer-grid .newsletter input::placeholder {
+  color: var(--primary-color);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+}
+
+.footer-grid .newsletter input:focus {
+  outline: none;
+}
+
+.footer-grid .newsletter-button {
+  background-color: var(--dark-color);
+  color: var(--newsletter-color);
+  border: 1px solid var(--dark-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-grid .newsletter-button:hover {
+  background-color: transparent;
+  border: 1px solid var(--newsletter-color);
+}
+
+/* Copyright */
+.footer-grid .copyright {
+  border-top: 1px solid var(--light-color);
+  text-align: right;
+}
+
+i.fa-heart {
+  color: red;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
   .navbar .main-menu {
