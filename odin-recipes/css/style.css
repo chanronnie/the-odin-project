@@ -540,6 +540,25 @@ i.fa-heart {
   color: var(--dark-color);
 }
 
+/* Recipe Page Navigation */
+.pages-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.pages-nav a {
+  color: var(--primary-color);
+}
+.pages-nav a:hover {
+  opacity: 0.6;
+}
+
+.pages-nav .next-page {
+  text-align: right;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
   .navbar .main-menu {
