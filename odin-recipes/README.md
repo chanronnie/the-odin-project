@@ -15,6 +15,7 @@ Odin Recipes is a project that I built during my web dev learning journey with T
 Here are the additional steps that I added:
 
 - Personalize fonts and text using [Google Fonts](https://fonts.google.com/) and [Font Awesome](https://fontawesome.com/)
+- Include extra sections to make the website more readable and presentable, such as navbar, hero section, about section and newsletter subscribe box
 - Add **media queries** for a responsive design (user-friendly)
 - Add a small code of **JavaScript** for activating the menu toggle in the mobile version
 - Use **CSS flex and grid** to arrange my HTML elements
