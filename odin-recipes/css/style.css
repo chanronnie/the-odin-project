@@ -713,12 +713,10 @@ i.fa-heart {
 
   .recipes-grid {
     grid-template-columns: repeat(2, 1fr);
-    /* grid-template-rows: repeat(2, 180px); */
     grid-template-rows: repeat(2, 290px);
   }
 
   .recipe-card-item .image-wrapper {
-    /* height: 126px; */
     height: 230px;
   }
 }
@@ -736,14 +734,6 @@ i.fa-heart {
   .about-content h3 {
     font-size: 1.4rem;
   }
-
-  /* .recipes-grid {
-    grid-template-rows: repeat(2, 150px);
-  }
-
-  .recipe-card-item .image-wrapper {
-    height: 105px;
-  } */
 
   .hero-recipe .hero-header {
     font-size: 10px;
