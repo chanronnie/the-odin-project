@@ -1,0 +1,22 @@
+/* Odd Numbered Elements */
+.odd-element {
+  background-color: rgb(255, 192, 203);
+  font-family: Verdana, "DejaVu Sans", sans-serif;
+}
+
+/* Number 2 */
+#second-element {
+  color: #0061ff;
+  font-size: 36px;
+}
+
+/* Common font size for Numbers 3 and 4 */
+.font-size-plus {
+  font-size: 24px;
+}
+
+/* Number 4 */
+#fourth-element {
+  background-color: #90ee90;
+  font-weight: bold;
+}
