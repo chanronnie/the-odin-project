@@ -1,16 +1,4 @@
-.header  {
-  font-family: monospace;
-  background: papayawhip;
-}
-
-.logo {
-  font-size: 48px;
-  font-weight: 900;
-  color: tomato;
-  background: white;
-  padding: 4px 32px;
-}
-
+/* Basis Styling */
 ul {
   /* this removes the dots on the list items*/
   list-style-type: none;
@@ -22,4 +10,32 @@ a {
   padding: 8px;
   /* this removes the line under the links */
   text-decoration: none;
+}
+
+.header {
+  font-family: monospace;
+  background: papayawhip;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+.logo {
+  font-size: 48px;
+  font-weight: 900;
+  color: tomato;
+  background: white;
+  padding: 4px 32px;
+
+  justify-self: center;
+}
+
+.left-links ul,
+.right-links ul {
+  display: flex;
+  gap: 1em;
+  padding: 0;
+  margin: 0;
 }
