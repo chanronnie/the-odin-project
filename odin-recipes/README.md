@@ -34,7 +34,7 @@ Odin Recipes is a project that I built during my web dev learning journey with T
 
 ## Mobile Previews
 
-My website is compatible in mobile devices. Please have a look at the screenshots below, or open my website in your own mobile devices! 😃
+My website is compatible with mobile devices. Please have a look at the screenshots below, or open my website on your own mobile devices! 😃
 
 <details>
   <summary>View Mobile Homepage</summary>
