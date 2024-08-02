@@ -4,7 +4,7 @@
 [![View - More Screenshots](https://img.shields.io/badge/View-More_Screenshots-D2649A?logo=GitHub)](./images/website-previews/)
 [![View - Website ](https://img.shields.io/badge/View-Website-orange)](https://chanronnie.github.io/the_odin_project/landing-page/)
 
-<img src="./images/website-previews/preview-desktop.png" alt="Preview Webpage" width="500">
+<img src="./images/website-previews/preview-desktop.png" alt="Preview Webpage" width="700">
 
 ## About this project
 
@@ -34,10 +34,10 @@ The EchoWave is a project that I built during my web dev learning journey with T
 
 ## Mobile Previews
 
-The EchoWave is compatible with mobile devices. Please have a look at the screenshots below, or open my website on your own mobile devices!😃
+The EchoWave is compatible with mobile devices. Please have a look at the screenshots below, or open my static website on your own mobile devices!😃
 
 <details>
-  <summary>View Mobile Recipe Webpage</summary>
+  <summary>View Mobile Webpage</summary>
 <img src="./images/website-previews/preview-mobile.png" width="400" alt="Preview Mobile">
 </details>
 
