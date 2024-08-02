@@ -53,6 +53,10 @@ img {
   padding: 2rem;
 }
 
+.container-sm {
+  max-width: 1050px;
+}
+
 .btn {
   padding: 0.7rem 1.8rem;
   background-color: var(--tertiary-color);
@@ -297,6 +301,48 @@ img {
 .grid-item .review .quotation {
   color: var(--tertiary-color);
   font-size: 1.2rem;
+}
+
+/* Newsletter */
+.newsletter {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url("../images/newsletter-background.jpg") center center/cover no-repeat;
+  color: var(--primary-color);
+  text-align: center;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.newsletter p {
+  font-size: 0.8rem;
+}
+
+.newsletter p:nth-of-type(2) {
+  margin-bottom: 1rem;
+}
+
+.newsletter input,
+.newsletter .btn {
+  padding: 0.4rem 1.4rem;
+  font-family: inherit;
+  border-radius: 10px;
+}
+
+.newsletter input {
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid transparent;
+}
+
+.newsletter input::placeholder {
+  font-size: inherit;
+  font-family: inherit;
+  color: var(--secondary-color);
+}
+
+.newsletter input:focus {
+  outline: none;
 }
 
 /* Media Queries */
