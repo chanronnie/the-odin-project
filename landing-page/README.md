@@ -2,7 +2,7 @@
 
 [![View - My Repositories](https://img.shields.io/badge/View-My_Repositories-brown?logo=GitHub)](https://github.com/chanronnie?tab=repositories)
 [![View - More Screenshots](https://img.shields.io/badge/View-More_Screenshots-D2649A?logo=GitHub)](./images/website-previews/)
-[![View - Website ](https://img.shields.io/badge/View-Website-orange)](https://chanronnie.github.io/the_odin_project/landing-page/)
+[![View - Website ](https://img.shields.io/badge/View-Website-orange)](https://chanronnie.github.io/the-odin-project/landing-page/)
 
 <img src="./images/website-previews/preview-desktop.png" alt="Preview Webpage" width="700">
 
@@ -28,7 +28,7 @@ The EchoWave is a project that I built during my web dev learning journey with T
 
 <br>
 
-[![View-Website ](https://img.shields.io/badge/View-Website-orange?style=for-the-badge)](https://chanronnie.github.io/the_odin_project/landing-page/)
+[![View-Website ](https://img.shields.io/badge/View-Website-orange?style=for-the-badge)](https://chanronnie.github.io/the-odin-project/landing-page/)
 
 <br>
 
