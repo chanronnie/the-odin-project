@@ -2,7 +2,7 @@
 
 [![View - My Repositories](https://img.shields.io/badge/View-My_Repositories-E76F51?logo=GitHub)](https://github.com/chanronnie?tab=repositories)
 [![View - More Screenshots](https://img.shields.io/badge/View-More_Screenshots-D2649A?logo=GitHub)](./images/website-preview/)
-[![View - Website ](https://img.shields.io/badge/View-Website-219C90)](https://chanronnie.github.io/the_odin_project/odin-recipes/)
+[![View - Website ](https://img.shields.io/badge/View-Website-219C90)](https://chanronnie.github.io/the-odin-project/odin-recipes/)
 
 <img src="./images/website-preview/preview-homepage.png" width="400" alt="preview-homepage">
 
@@ -28,7 +28,7 @@ Odin Recipes is a project that I built during my web dev learning journey with T
 
 <br>
 
-[![View-Website ](https://img.shields.io/badge/View-Website-219C90?style=for-the-badge)](https://chanronnie.github.io/the_odin_project/odin-recipes/)
+[![View-Website ](https://img.shields.io/badge/View-Website-219C90?style=for-the-badge)](https://chanronnie.github.io/the-odin-project/odin-recipes/)
 
 <br>
 
