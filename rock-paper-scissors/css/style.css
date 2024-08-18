@@ -235,6 +235,20 @@ a:hover {
   display: none;
 }
 
+/* MOVE IMAGES */
+/* These images are displayed on the screen only after their corresponding buttons are clicked by the player. */
+.rock {
+  background: url('../images/rock.svg') center center/contain no-repeat;
+}
+
+.paper {
+  background: url('../images/paper.svg') center center/contain no-repeat;
+}
+
+.scissors {
+  background: url('../images/scissors.svg') center center/contain no-repeat;
+}
+
 /* FOOTER */
 footer {
   margin-top: 1rem;
