@@ -17,6 +17,38 @@
   </head>
 
   <body>
+    <main>
+      <!-- Players -->
+      <section class="players">
+        <!-- Human Player -->
+        <section class="card player-human">
+          <div>
+            <p class="player-name">
+              <span class="win-marker removed"><i class="fa-solid fa-circle-check fa-sm"></i></span>
+              Player [You]
+            </p>
+            <p class="score-human">0</p>
+          </div>
+          <figure class="choice-human"></figure>
+          <div class="game-winner hidden">Game Winner!</div>
+        </section>
+
+        <div class="game-phase">vs</div>
+
+        <!-- Computer Player-->
+        <section class="card player-computer">
+          <div>
+            <p class="player-name">
+              <span class="win-marker removed"><i class="fa-solid fa-circle-check fa-sm"></i></span>
+              Computer
+            </p>
+            <p class="score-computer">0</p>
+          </div>
+          <figure class="choice-computer"></figure>
+          <div class="game-winner hidden">Game Winner!</div>
+        </section>
+      </section>
+    </main>
     <!-- JavaScript script -->
     <script src="./js/script.js"></script>
   </body>
