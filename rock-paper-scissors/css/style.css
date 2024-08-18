@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* STYLING VARIABLES */
+:root {
+  --light-color: #f4efea;
+  --dark-color: #292321;
+  --btn-color: #00c1b5;
+  --human-card-color: #f9cdcd;
+  --computer-card-color: #fcf9ee;
+  --winner-color: #adf7d1;
+  --box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.9);
+}
+
+/* BASIC STYLING */
+body {
+  height: 100vh;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bold;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  height: 33.5rem;
+  width: 45rem;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+}
+
+a {
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--btn-color);
+}
+
+/* UTILITY CLASSES */
+.btn {
+  padding: 0.7rem 0.8rem;
+  border: 3px solid var(--dark-color);
+  box-shadow: var(--box-shadow);
+  border-radius: 10px;
+  background-color: var(--btn-color);
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  filter: brightness(90%);
+}
+
+.btn:active {
+  transform: translateY(5px);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
