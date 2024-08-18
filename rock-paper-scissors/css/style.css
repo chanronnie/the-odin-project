@@ -226,6 +226,15 @@ a:hover {
   font-size: 0.6rem;
 }
 
+/* VISIBILITY CLASSES */
+.hidden {
+  visibility: hidden;
+}
+
+.removed {
+  display: none;
+}
+
 /* FOOTER */
 footer {
   margin-top: 1rem;
