@@ -249,6 +249,17 @@ a:hover {
   background: url('../images/scissors.svg') center center/contain no-repeat;
 }
 
+/* GAME SETUPS */
+.winner-setup {
+  background-color: var(--winner-color);
+
+  .game-winner {
+    font-size: 1.5rem;
+    font-weight: bold;
+    visibility: visible;
+  }
+}
+
 /* FOOTER */
 footer {
   margin-top: 1rem;
