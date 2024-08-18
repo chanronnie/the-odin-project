@@ -147,3 +147,74 @@ a:hover {
   box-shadow: 3px 3px 1px var(--dark-color);
   background-color: var(--btn-color);
 }
+
+/* BOARD LAYOUT */
+.board {
+  width: 37.5rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255);
+  border: 3px solid var(--dark-color);
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  position: absolute;
+  left: 50%;
+  bottom: 3%;
+  transform: translate(-50%, -3%);
+  z-index: 10;
+}
+
+/* ROUND BOARD ELEMENTS */
+.round-board {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.round-outcome {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* MOVE BOARD LAYOUT */
+.moves-flex {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 3rem;
+}
+
+/* MOVES ELEMENTS */
+.moves-flex .btn {
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.moves-flex .btn:hover {
+  border: 3px solid var(--dark-color);
+}
+
+.moves-flex figure {
+  height: 70px;
+  width: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.moves-flex figure img {
+  height: 70%;
+  width: 70%;
+  margin-bottom: 0.2rem;
+}
+
+.moves-flex figcaption {
+  font-size: 0.6rem;
+}
