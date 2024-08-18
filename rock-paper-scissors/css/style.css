@@ -73,6 +73,13 @@ a:hover {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
+/* RESET BUTTON */
+.btn-reset {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
 /* PLAYERS LAYOUT*/
 .players {
   height: 100%;
