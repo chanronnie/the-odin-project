@@ -225,3 +225,8 @@ a:hover {
 .moves-flex figcaption {
   font-size: 0.6rem;
 }
+
+/* FOOTER */
+footer {
+  margin-top: 1rem;
+}
