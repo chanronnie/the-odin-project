@@ -1,6 +1,6 @@
 # Landing Page
 
-[![View - My Repositories](https://img.shields.io/badge/View-My_Repositories-brown?logo=GitHub)](https://github.com/chanronnie?tab=repositories)
+[![View - Main Folder](https://img.shields.io/badge/View-Main_Folder-06816E?logo=GitHub)](https://github.com/chanronnie/the-odin-project)
 [![View - More Screenshots](https://img.shields.io/badge/View-More_Screenshots-D2649A?logo=GitHub)](./images/website-previews/)
 [![View - Website ](https://img.shields.io/badge/View-Website-orange)](https://chanronnie.github.io/the-odin-project/landing-page/)
 
@@ -65,3 +65,7 @@ The design and layout of this landing page are inspired by the UX design project
 - **Podcaster-3** - Photo by [Cottonbro Studio](https://www.pexels.com/@cottonbro/) on Pexels
 - **Podcaster-4** - Photo by [Marty O’Neill](https://unsplash.com/@marty_made_it) on Unsplash
 - **Newsletter Background** - Photo by [Gritte](https://unsplash.com/@gritte) on Unsplash
+
+## Licence
+
+&copy; 2024 - This project is licensed under the [MIT License](./LICENSE).

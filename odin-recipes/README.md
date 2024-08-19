@@ -1,6 +1,6 @@
 # Odin Recipes
 
-[![View - My Repositories](https://img.shields.io/badge/View-My_Repositories-E76F51?logo=GitHub)](https://github.com/chanronnie?tab=repositories)
+[![View - Main Folder](https://img.shields.io/badge/View-Main_Folder-06816E?logo=GitHub)](https://github.com/chanronnie/the-odin-project)
 [![View - More Screenshots](https://img.shields.io/badge/View-More_Screenshots-D2649A?logo=GitHub)](./images/website-preview/)
 [![View - Website ](https://img.shields.io/badge/View-Website-219C90)](https://chanronnie.github.io/the-odin-project/odin-recipes/)
 
@@ -61,3 +61,7 @@ My website is compatible with mobile devices. Please have a look at the screensh
 - **Easy Quesadilla** - Photo by [Geraud Pfeiffer](https://www.pexels.com/@geraud-pfeiffer/) on Pexels
 - **Summer Strawberry Salad** - Photo by [Dovile Ramoskaite](https://unsplash.com/@dovilerm) on Unsplash
 - **Simplified Shakshuka** - Photo by [Julia Khalimova](https://www.pexels.com/@julia-khalimova-826746/) on Pexels
+
+## Licence
+
+&copy; 2024 - This project is licensed under the [MIT License](./LICENSE).

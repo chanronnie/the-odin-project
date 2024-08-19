@@ -29,10 +29,10 @@ The goal of this project is to build a rock-paper-scissors game using HTML, CSS,
 
 ## Features
 
-- `CSS Flexbox` and `position` is used to arrange HTML elements.
-- Various game setups are implemented using CSS classes and JavaScript for winning and tie scenarios.
-- A winner dot is displayed next to the player who wins the round.
-- `DOM manipulation` with JavaScript is used to add functionality to buttons and manages game logic.
+- CSS Flexbox and Positioning for layout
+- Multiple game setups for win/tie scenarios
+- Winner dot next to the round winner
+- DOM manipulation for interactive elements
 
 ## Technologies
 
@@ -52,3 +52,7 @@ Below are previews of the different game setups. <br>
 <img src="./images/screenshots/round-winner.png" alt = "round-winner" width = "800">
 <img src="./images/screenshots/draw.png" alt = "draw" width = "800">
 <img src="./images/screenshots/game-winner.png" alt = "game-winner" width = "800">
+
+## Licence
+
+&copy; 2024 - This project is licensed under the [MIT License](./LICENSE).
