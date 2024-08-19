@@ -4,7 +4,7 @@
 [![View - More Screenshots](https://img.shields.io/badge/View-More_Screenshots-00c1b5?logo=GitHub)](./images/screenshots/)
 [![View - Demo ](https://img.shields.io/badge/View-Demo-f9cdcd)](https://chanronnie.github.io/the-odin-project/rock-paper-scissors/)
 
-![Preview](./images/screenshots/preview.png)
+<img src="./images/screenshots/preview.png" alt = "preview" width = "850">
 
 ## About this project
 
@@ -49,6 +49,6 @@ The goal of this project is to build a rock-paper-scissors game using HTML, CSS,
 
 Below are previews of the different game setups. <br>
 
-![Round-Winner](./images/screenshots/round-winner.png)
-![draw](./images/screenshots/draw.png)
-![Game-Winner](./images/screenshots/game-winner.png)
+<img src="./images/screenshots/round-winner.png" alt = "round-winner" width = "800">
+<img src="./images/screenshots/draw.png" alt = "draw" width = "800">
+<img src="./images/screenshots/game-winner.png" alt = "game-winner" width = "800">
