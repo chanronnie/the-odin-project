@@ -176,6 +176,22 @@ function divide(a, b) {
 }
 
 // -------------------------- //
+// FUNCTION FOR HANDLING SIGN BUTTON
+
+function handleSignClick() {
+  if (hasError || isInputEmpty()) return;
+  if (hasCalculated) {
+    init();
+    return;
+  }
+
+  // Reverse the sign
+  const prevNum = currNum;
+  currNum *= -1;
+  replaceInputElement(prevNum, currNum);
+}
+
+// -------------------------- //
 // HELPER FUNCTIONS
 
 // FUNCTION TO START A NEW CALCULATION USING THE PREVIOUS RESULT
@@ -239,4 +255,5 @@ document
   .querySelectorAll(".operators .btn")
   .forEach((button) => button.addEventListener("click", (e) => handleOperatorClick(e)));
 
+btnSign.addEventListener("click", handleSignClick);
 btnClear.addEventListener("click", init);
