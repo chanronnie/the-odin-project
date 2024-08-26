@@ -197,12 +197,21 @@ by displaying the number buttons in descending order.
     width: 100vw;
     border-radius: 0;
     overflow: hidden;
-    justify-content: space-evenly;
+
+    display: block;
+    text-align: center;
   }
 
   .github-link {
     position: absolute;
     top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .display {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
   }
 
   .display .display-result {
