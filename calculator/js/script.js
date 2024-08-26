@@ -76,7 +76,118 @@ function handleDeleteClick(value) {
 }
 
 // -------------------------- //
+// FUNCTIONS FOR HANDLING OPERATOR BUTTONS
+
+function handleOperatorClick(event) {
+  if (hasError || isInputEmpty()) return;
+
+  const selectedOperator = event.target.dataset.action;
+  if (selectedOperator === "equals") {
+    handleEqualsClick();
+  } else {
+    handleInputOperator(selectedOperator);
+  }
+}
+
+function handleInputOperator(operatorValue) {
+  if (hasCalculated) continueCalculation();
+
+  // Map operator value to symbol
+  const operatorMapping = {
+    add: "+",
+    substract: "-",
+    multiply: "x",
+    divide: "÷"
+  };
+  const operatorSymbol = operatorMapping[operatorValue];
+
+  // Store the operator if not found
+  if (!operator) {
+    firstNum = Number(currNum);
+    operator = operatorSymbol;
+    appendInputDisplay(operator);
+    currNum = "";
+
+    // Overwrite the last operator if present
+  } else if (firstNum && operator && !currNum) {
+    operator = operatorSymbol;
+    setInputDisplay(`${firstNum}${operator}`);
+
+    // If user inputs a 2nd operator, compute first expression part
+  } else if (firstNum && operator && !secondNum) {
+    secondNum = Number(currNum);
+    firstNum = compute(firstNum, operator, secondNum);
+    operator = operatorSymbol;
+    setInputDisplay(`${firstNum}${operator}`);
+  }
+}
+
+// -------------------------- //
+// FUNCTION FOR HANDLING "EQUALS" BUTTON
+
+function handleEqualsClick() {
+  if (hasCalculated) return;
+
+  secondNum = Number(currNum);
+  compute(firstNum, operator, secondNum);
+  hasCalculated = true;
+}
+
+// FUNCTION FOR CALCULATING
+function compute(a, operator, b) {
+  const mapOperation = {
+    "+": add,
+    "-": substract,
+    x: multiply,
+    "÷": divide
+  };
+  let result = mapOperation[operator](a, b);
+  if (!Number.isInteger(result)) result = parseFloat(result.toFixed(5));
+  setResultDisplay(result);
+
+  // Reset variables
+  secondNum = 0;
+  currNum = "";
+
+  return result;
+}
+
+// -------------------------- //
+// FUNCTIONS FOR SIMPLE ARITHMETIC OPERATIONS
+
+function add(a, b) {
+  return a + b;
+}
+
+function substract(a, b) {
+  return a - b;
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+function divide(a, b) {
+  if (b === 0) {
+    hasError = true;
+    return "MATH ERROR";
+  }
+  return a / b;
+}
+
+// -------------------------- //
 // HELPER FUNCTIONS
+
+// FUNCTION TO START A NEW CALCULATION USING THE PREVIOUS RESULT
+function continueCalculation() {
+  firstNum = Number(displayResultEl.textContent);
+  setInputDisplay(displayResultEl.textContent);
+
+  setResultDisplay("0");
+  currNum = "";
+  secondNum = 0;
+  hasCalculated = false;
+}
 
 // FUNCTIONS TO MANAGE AND UPDATE DISPLAY ELEMENTS
 function isInputEmpty() {
@@ -123,3 +234,9 @@ init();
 document
   .querySelectorAll(".operands .btn")
   .forEach((button) => button.addEventListener("click", (e) => handleOperandClick(e)));
+
+document
+  .querySelectorAll(".operators .btn")
+  .forEach((button) => button.addEventListener("click", (e) => handleOperatorClick(e)));
+
+btnClear.addEventListener("click", init);
