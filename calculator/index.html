@@ -17,6 +17,69 @@
   </head>
 
   <body>
+    <main class="calculator">
+      <!-- GitHub Link -->
+      <div>
+        <a
+          href="https://github.com/chanronnie/the-odin-project/tree/main/calculator"
+          target="_blank"
+          ><i class="fa-brands fa-github"></i> Ronnie Chan</a
+        >
+      </div>
+
+      <!-- Display -->
+      <section class="display">
+        <div class="display-input"></div>
+        <div class="display-result"></div>
+      </section>
+
+      <!-- Keys -->
+      <section class="keys">
+        <!-- Control Buttons -->
+        <section class="controls">
+          <button class="btn btn-clear">AC</button>
+          <button class="btn btn-sign">+/-</button>
+          <button class="btn btn-percent">%</button>
+        </section>
+
+        <!-- Operator Buttons -->
+        <section class="operators">
+          <button class="btn" data-action="divide">÷</button>
+          <button class="btn" data-action="multiply">x</button>
+          <button class="btn" data-action="substract">-</button>
+          <button class="btn" data-action="add">+</button>
+          <button class="btn" data-action="equals">=</button>
+        </section>
+
+        <!-- Operand Buttons -->
+        <section class="operands">
+          <div class="operands-row">
+            <button class="btn" value="0">0</button>
+            <button class="btn" value="decimal">.</button>
+            <button class="btn" value="delete"><i class="fa-solid fa-delete-left"></i></button>
+          </div>
+
+          <div class="operands-row">
+            <button class="btn" value="1">1</button>
+            <button class="btn" value="2">2</button>
+            <button class="btn" value="3">3</button>
+          </div>
+
+          <div class="operands-row">
+            <button class="btn" value="4">4</button>
+            <button class="btn" value="5">5</button>
+            <button class="btn" value="6">6</button>
+          </div>
+
+          <div class="operands-row">
+            <button class="btn" value="7">7</button>
+            <button class="btn" value="8">8</button>
+            <button class="btn" value="9">9</button>
+          </div>
+        </section>
+      </section>
+    </main>
+
     <!-- JavaScript file -->
     <script src="./js/script.js"></script>
   </body>
