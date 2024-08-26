@@ -1,0 +1,47 @@
+/* GOOGLE FONT: ORBITRON */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+/* RESET UNIVERSAL */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ROOT VARIABLES */
+:root {
+  --primary-color: #373a40;
+  --font-color: #eeeeee;
+  --controls-background-color: #eeeeee;
+  --controls-font-color: #181818;
+  --operator-background-color: #dc5f00;
+  --operator-font-color: #eeeeee;
+  --operand-background-color: #686d76;
+  --operand-font-color: #eeeeee;
+}
+
+/* BASIC STYLING */
+body {
+  height: 100vh;
+  font-family: "Orbitron", sans-serif;
+  color: var(--font-color);
+  background-color: var(--operand-background-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #a9a9a9;
+  font-size: 12px;
+  letter-spacing: 3px;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--font-color);
+}
