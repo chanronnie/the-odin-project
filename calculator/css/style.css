@@ -45,3 +45,137 @@ a {
 a:hover {
   color: var(--font-color);
 }
+
+/* BUTTON STYLING */
+.btn {
+  flex: 1;
+  height: 3.5rem;
+  width: auto;
+
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  filter: brightness(0.9);
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+/* CALCULATOR LAYOUT */
+.calculator {
+  height: 33rem;
+  width: 20rem;
+  padding: 1.4rem;
+  border-radius: 1rem;
+  background-color: var(--primary-color);
+  box-shadow: 2rem 2rem 1.5rem rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* DISPLAY */
+.display {
+  flex: 1;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 1.1rem;
+  padding-bottom: 1.4rem;
+  overflow: hidden;
+  color: var(--font-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: end;
+}
+
+/* UPPER LINE - INPUT */
+.display .display-input {
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+/* LOWER LINE - RESULT */
+.display .display-result {
+  font-size: 2.5rem;
+}
+
+/* INPUT KEYS LAYOUT */
+.keys {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    "controls operators"
+    "operands operators";
+  gap: 0.5rem;
+}
+
+/* CONTROL BUTTONS */
+.controls {
+  grid-area: controls;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.controls .btn {
+  background-color: var(--controls-background-color);
+  color: var(--controls-font-color);
+}
+
+/* OPERATOR BUTTONS */
+.operators {
+  grid-area: operators;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.operators .btn {
+  background-color: var(--operator-background-color);
+  color: var(--operator-font-color);
+}
+
+/* OPERAND BUTTONS */
+
+/* 
+Reproduce the typical calculator layout 
+by displaying the number buttons in descending order.
+*/
+.operands {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.5rem;
+}
+
+.operands-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.operands .btn {
+  background-color: var(--operand-background-color);
+  color: var(--operand-font-color);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 468px) {
+  .calculator {
+    height: 100vh;
+    width: 100vh;
+    border-radius: 0;
+  }
+}
