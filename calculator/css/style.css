@@ -1,7 +1,8 @@
 /* GOOGLE FONT: ORBITRON */
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
 
-/* RESET UNIVERSAL */
+/* -------------------------- */
+/* RESET UNIVERSAL SELECTOR */
 *,
 *::before,
 *::after {
@@ -10,6 +11,7 @@
   box-sizing: border-box;
 }
 
+/* -------------------------- */
 /* ROOT VARIABLES */
 :root {
   --primary-color: #373a40;
@@ -22,6 +24,7 @@
   --operand-font-color: #eeeeee;
 }
 
+/* -------------------------- */
 /* BASIC STYLING */
 body {
   height: 100vh;
@@ -46,6 +49,7 @@ a:hover {
   color: var(--font-color);
 }
 
+/* -------------------------- */
 /* BUTTON STYLING */
 .btn {
   flex: 1;
@@ -70,6 +74,7 @@ a:hover {
   transform: translateY(2px);
 }
 
+/* -------------------------- */
 /* CALCULATOR LAYOUT */
 .calculator {
   height: 33rem;
@@ -79,15 +84,16 @@ a:hover {
   background-color: var(--primary-color);
   box-shadow: 2rem 2rem 1.5rem rgba(0, 0, 0, 0.3);
 
-  display: flex;
+  text-align: center;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; */
 }
 
+/* -------------------------- */
 /* DISPLAY */
 .display {
-  flex: 1;
   width: 100%;
   border-radius: 1rem;
   padding: 1.1rem;
@@ -101,6 +107,11 @@ a:hover {
   text-align: end;
 }
 
+.display > div {
+  min-height: 2rem;
+  width: 100%;
+}
+
 /* UPPER LINE - INPUT */
 .display .display-input {
   font-size: 1.5rem;
@@ -112,10 +123,10 @@ a:hover {
   font-size: 2.5rem;
 }
 
+/* -------------------------- */
 /* INPUT KEYS LAYOUT */
 .keys {
   width: 100%;
-
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-areas:
@@ -124,6 +135,7 @@ a:hover {
   gap: 0.5rem;
 }
 
+/* -------------------------- */
 /* CONTROL BUTTONS */
 .controls {
   grid-area: controls;
@@ -136,6 +148,7 @@ a:hover {
   color: var(--controls-font-color);
 }
 
+/* -------------------------- */
 /* OPERATOR BUTTONS */
 .operators {
   grid-area: operators;
@@ -149,6 +162,7 @@ a:hover {
   color: var(--operator-font-color);
 }
 
+/* -------------------------- */
 /* OPERAND BUTTONS */
 
 /* 
@@ -171,11 +185,25 @@ by displaying the number buttons in descending order.
   color: var(--operand-font-color);
 }
 
+/* -------------------------- */
 /* MEDIA QUERIES */
 @media (max-width: 468px) {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+  }
+
   .calculator {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100vh;
-    width: 100vh;
+    width: 100vw;
     border-radius: 0;
+    overflow: hidden;
+
+    justify-content: flex-start;
   }
 }
