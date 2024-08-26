@@ -192,6 +192,13 @@ by displaying the number buttons in descending order.
     position: relative;
   }
 
+  .github-link {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .calculator {
     height: 100vh;
     width: 100vw;
@@ -202,15 +209,16 @@ by displaying the number buttons in descending order.
     text-align: center;
   }
 
-  .github-link {
-    position: absolute;
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
+  .keys,
+  .controls,
+  .operators,
+  .operands,
+  .operands-row {
+    gap: 0.8rem;
   }
 
   .display {
-    margin-top: 4rem;
+    margin-top: 4.2rem;
     margin-bottom: 2rem;
   }
 
