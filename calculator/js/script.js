@@ -192,6 +192,42 @@ function handleSignClick() {
 }
 
 // -------------------------- //
+// FUNCTION FOR HANDLING PERCENT BUTTON
+
+function handlePercentClick() {
+  if (hasError || isInputEmpty()) return;
+  if (hasCalculated) {
+    init();
+    return;
+  }
+
+  // If input is something like "5+%", send an error message
+  if (firstNum && operator && !currNum) {
+    hasError = true;
+    appendInputDisplay("%");
+    setResultDisplay("SYNTAX ERROR");
+    return;
+  }
+
+  handlePercentComputations();
+}
+
+function handlePercentComputations() {
+  // If input consists of a single number, convert it to a percentage
+  if (!firstNum && currNum) {
+    firstNum = Number(currNum / 100);
+    setInputDisplay(firstNum);
+
+    // If input consists of 2 numbers, adjust the current number based on the percentage
+  } else if (firstNum && operator && currNum) {
+    secondNum = firstNum * (Number(currNum) / 100);
+    setInputDisplay(`${firstNum}${operator}${secondNum}`);
+    compute(firstNum, operator, secondNum);
+    hasCalculated = true;
+  }
+}
+
+// -------------------------- //
 // HELPER FUNCTIONS
 
 // FUNCTION TO START A NEW CALCULATION USING THE PREVIOUS RESULT
@@ -256,4 +292,5 @@ document
   .forEach((button) => button.addEventListener("click", (e) => handleOperatorClick(e)));
 
 btnSign.addEventListener("click", handleSignClick);
+btnPercent.addEventListener("click", handlePercentClick);
 btnClear.addEventListener("click", init);
