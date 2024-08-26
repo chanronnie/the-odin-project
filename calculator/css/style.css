@@ -219,11 +219,19 @@ by displaying the number buttons in descending order.
 
   .display {
     margin-top: 4.2rem;
-    margin-bottom: 2rem;
+  }
+
+  .display > div {
+    min-height: 4rem;
+  }
+
+  .display .display-input {
+    font-size: 2.8rem;
   }
 
   .display .display-result {
-    font-size: 3rem;
+    font-size: 4rem;
+    margin-bottom: 2rem;
   }
 
   .btn {
