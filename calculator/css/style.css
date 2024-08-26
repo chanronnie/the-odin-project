@@ -1,8 +1,8 @@
 /* GOOGLE FONT: ORBITRON */
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
 /* -------------------------- */
-/* RESET UNIVERSAL SELECTOR */
+/* GLOBAL RESETS */
 *,
 *::before,
 *::after {
@@ -25,10 +25,10 @@
 }
 
 /* -------------------------- */
-/* BASIC STYLING */
+/* BASE STYLES */
 body {
   height: 100vh;
-  font-family: "Orbitron", sans-serif;
+  font-family: 'Orbitron', sans-serif;
   color: var(--font-color);
   background-color: var(--operand-background-color);
 
@@ -50,13 +50,13 @@ a:hover {
 }
 
 /* -------------------------- */
-/* BUTTON STYLING */
+/* BUTTON */
 .btn {
   flex: 1;
   height: 3.5rem;
   width: auto;
 
-  font-family: "Orbitron", sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
   text-align: center;
@@ -129,8 +129,8 @@ a:hover {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-areas:
-    "controls operators"
-    "operands operators";
+    'controls operators'
+    'operands operators';
   gap: 0.5rem;
 }
 

@@ -1,15 +1,15 @@
 // CALCULATOR 2024 - Author: Ronnie Chan
 
-"use strict";
+'use strict';
 
 // -------------------------- //
 // SELECT DOM ELEMENTS
 
-let displayInputEl = document.querySelector(".display-input");
-let displayResultEl = document.querySelector(".display-result");
+let displayInputEl = document.querySelector('.display-input');
+let displayResultEl = document.querySelector('.display-result');
 const btnClear = document.querySelector(`.btn-clear`);
-const btnSign = document.querySelector(".btn-sign");
-const btnPercent = document.querySelector(".btn-percent");
+const btnSign = document.querySelector('.btn-sign');
+const btnPercent = document.querySelector('.btn-percent');
 
 // -------------------------- //
 // VARIABLES
@@ -31,9 +31,9 @@ function handleOperandClick(event) {
   const value = event.target.value || event.key;
   if (!isNaN(Number(value))) {
     handleNumberClick(value);
-  } else if (value === "decimal" || value === ".") {
+  } else if (value === 'decimal' || value === '.') {
     handleDecimalClick(value);
-  } else if (value === "delete" || value === "Backspace") {
+  } else if (value === 'delete' || value === 'Backspace') {
     handleDeleteClick(value);
   }
 }
@@ -45,17 +45,17 @@ function handleNumberClick(value) {
 }
 
 function handleDecimalClick(value) {
-  if (currNum.toString().includes(".")) return;
+  if (currNum.toString().includes('.')) return;
 
   // If there's no current number, start with "0."
   if (currNum.length === 0) {
-    currNum = "0.";
-    appendInputDisplay("0.");
+    currNum = '0.';
+    appendInputDisplay('0.');
 
     // Otherwise, add a decimal after the current number
   } else {
-    currNum += ".";
-    appendInputDisplay(".");
+    currNum += '.';
+    appendInputDisplay('.');
   }
 }
 
@@ -69,7 +69,7 @@ function handleDeleteClick(value) {
   if (!newInput.includes(secondNum.toString())) {
     secondNum = 0;
   } else if (!newInput.includes(operator)) {
-    operator = "";
+    operator = '';
   } else if (!newInput.includes(firstNum.toString())) {
     firstNum = 0;
   }
@@ -82,7 +82,7 @@ function handleOperatorClick(event) {
   if (hasError || isInputEmpty()) return;
 
   const selectedOperator = event.target.dataset.action || event.key;
-  if (selectedOperator === "equals" || selectedOperator === "Enter" || selectedOperator === "=") {
+  if (selectedOperator === 'equals' || selectedOperator === 'Enter' || selectedOperator === '=') {
     handleEqualsClick();
   } else {
     handleInputOperator(selectedOperator);
@@ -94,12 +94,12 @@ function handleInputOperator(operatorValue) {
 
   // Map operator value to symbol
   const operatorMapping = {
-    add: "+",
-    substract: "-",
-    multiply: "x",
-    divide: "÷",
-    "*": "x",
-    "/": "÷"
+    add: '+',
+    substract: '-',
+    multiply: 'x',
+    divide: '÷',
+    '*': 'x',
+    '/': '÷',
   };
   const operatorSymbol = operatorMapping[operatorValue] || operatorValue;
 
@@ -108,7 +108,7 @@ function handleInputOperator(operatorValue) {
     firstNum = Number(currNum);
     operator = operatorSymbol;
     appendInputDisplay(operator);
-    currNum = "";
+    currNum = '';
 
     // Overwrite the last operator if present
   } else if (firstNum && operator && !currNum) {
@@ -138,12 +138,12 @@ function handleEqualsClick() {
 // FUNCTION FOR CALCULATING
 function compute(a, operator, b) {
   const mapOperation = {
-    "+": add,
-    "-": substract,
+    '+': add,
+    '-': substract,
     x: multiply,
-    "*": multiply,
-    "÷": divide,
-    "/": divide
+    '*': multiply,
+    '÷': divide,
+    '/': divide,
   };
   let result = mapOperation[operator](a, b);
   if (!Number.isInteger(result)) result = parseFloat(result.toFixed(5));
@@ -151,7 +151,7 @@ function compute(a, operator, b) {
 
   // Reset variables
   secondNum = 0;
-  currNum = "";
+  currNum = '';
 
   return result;
 }
@@ -174,7 +174,7 @@ function multiply(a, b) {
 function divide(a, b) {
   if (b === 0) {
     hasError = true;
-    return "MATH ERROR";
+    return 'MATH ERROR';
   }
   return a / b;
 }
@@ -208,8 +208,8 @@ function handlePercentClick() {
   // If input is something like "5+%", send an error message
   if (firstNum && operator && !currNum) {
     hasError = true;
-    appendInputDisplay("%");
-    setResultDisplay("SYNTAX ERROR");
+    appendInputDisplay('%');
+    setResultDisplay('SYNTAX ERROR');
     return;
   }
 
@@ -239,8 +239,8 @@ function continueCalculation() {
   firstNum = Number(displayResultEl.textContent);
   setInputDisplay(displayResultEl.textContent);
 
-  setResultDisplay("0");
-  currNum = "";
+  setResultDisplay('0');
+  currNum = '';
   secondNum = 0;
   hasCalculated = false;
 }
@@ -268,12 +268,12 @@ function setResultDisplay(newText) {
 
 // FUNCTION TO RESET THE APP
 function init() {
-  setInputDisplay("");
-  setResultDisplay("0");
-  currNum = "";
+  setInputDisplay('');
+  setResultDisplay('0');
+  currNum = '';
   firstNum = 0;
   secondNum = 0;
-  operator = "";
+  operator = '';
   hasError = false;
   hasCalculated = false;
 }
@@ -287,34 +287,30 @@ init();
 // -------------------------- //
 // EVENT HANDLERS FOR BUTTON CLICKS
 
-document
-  .querySelectorAll(".operands .btn")
-  .forEach((button) => button.addEventListener("click", (e) => handleOperandClick(e)));
+document.querySelectorAll('.operands .btn').forEach((button) => button.addEventListener('click', (e) => handleOperandClick(e)));
 
-document
-  .querySelectorAll(".operators .btn")
-  .forEach((button) => button.addEventListener("click", (e) => handleOperatorClick(e)));
+document.querySelectorAll('.operators .btn').forEach((button) => button.addEventListener('click', (e) => handleOperatorClick(e)));
 
-btnSign.addEventListener("click", handleSignClick);
-btnPercent.addEventListener("click", handlePercentClick);
-btnClear.addEventListener("click", init);
+btnSign.addEventListener('click', handleSignClick);
+btnPercent.addEventListener('click', handlePercentClick);
+btnClear.addEventListener('click', init);
 
 // -------------------------- //
 // EVENT HANDLERS FOR KEYBOARD INPUT
 
-document.addEventListener("keydown", function (e) {
+document.addEventListener('keydown', function (e) {
   const key = e.key;
-  const operators = "+-*/=";
+  const operators = '+-*/=';
 
-  if ((Number(key) >= 0 && Number(key) <= 9) || key === "." || key === "Backspace") {
+  if ((Number(key) >= 0 && Number(key) <= 9) || key === '.' || key === 'Backspace') {
     handleOperandClick(e);
-  } else if (operators.includes(key) || key === "Enter") {
+  } else if (operators.includes(key) || key === 'Enter') {
     handleOperatorClick(e);
-  } else if (key === "s" || key === "n") {
+  } else if (key === 's' || key === 'n') {
     handleSignClick();
-  } else if (key === "%") {
+  } else if (key === '%') {
     handlePercentClick();
-  } else if (key === "c" || key === "Escape") {
+  } else if (key === 'c' || key === 'Escape') {
     init();
   }
 });
