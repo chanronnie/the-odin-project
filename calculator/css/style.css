@@ -189,6 +189,7 @@ by displaying the number buttons in descending order.
 @media (min-width: 300px) and (max-width: 468px) {
   body {
     overflow: hidden;
+    position: relative;
   }
 
   .calculator {
@@ -196,6 +197,12 @@ by displaying the number buttons in descending order.
     width: 100vw;
     border-radius: 0;
     overflow: hidden;
+    justify-content: space-evenly;
+  }
+
+  .github-link {
+    position: absolute;
+    top: 1rem;
   }
 
   .display .display-result {
