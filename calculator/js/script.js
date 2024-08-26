@@ -28,12 +28,12 @@ function handleOperandClick(event) {
   if (hasError) return;
   if (hasCalculated) init();
 
-  const value = event.target.value;
+  const value = event.target.value || event.key;
   if (!isNaN(Number(value))) {
     handleNumberClick(value);
-  } else if (value === "decimal") {
+  } else if (value === "decimal" || value === ".") {
     handleDecimalClick(value);
-  } else if (value === "delete") {
+  } else if (value === "delete" || value === "Backspace") {
     handleDeleteClick(value);
   }
 }
@@ -81,8 +81,8 @@ function handleDeleteClick(value) {
 function handleOperatorClick(event) {
   if (hasError || isInputEmpty()) return;
 
-  const selectedOperator = event.target.dataset.action;
-  if (selectedOperator === "equals") {
+  const selectedOperator = event.target.dataset.action || event.key;
+  if (selectedOperator === "equals" || selectedOperator === "Enter" || selectedOperator === "=") {
     handleEqualsClick();
   } else {
     handleInputOperator(selectedOperator);
@@ -97,9 +97,11 @@ function handleInputOperator(operatorValue) {
     add: "+",
     substract: "-",
     multiply: "x",
-    divide: "÷"
+    divide: "÷",
+    "*": "x",
+    "/": "÷"
   };
-  const operatorSymbol = operatorMapping[operatorValue];
+  const operatorSymbol = operatorMapping[operatorValue] || operatorValue;
 
   // Store the operator if not found
   if (!operator) {
@@ -139,7 +141,9 @@ function compute(a, operator, b) {
     "+": add,
     "-": substract,
     x: multiply,
-    "÷": divide
+    "*": multiply,
+    "÷": divide,
+    "/": divide
   };
   let result = mapOperation[operator](a, b);
   if (!Number.isInteger(result)) result = parseFloat(result.toFixed(5));
@@ -294,3 +298,23 @@ document
 btnSign.addEventListener("click", handleSignClick);
 btnPercent.addEventListener("click", handlePercentClick);
 btnClear.addEventListener("click", init);
+
+// -------------------------- //
+// EVENT HANDLERS FOR KEYBOARD INPUT
+
+document.addEventListener("keydown", function (e) {
+  const key = e.key;
+  const operators = "+-*/=";
+
+  if ((Number(key) >= 0 && Number(key) <= 9) || key === "." || key === "Backspace") {
+    handleOperandClick(e);
+  } else if (operators.includes(key) || key === "Enter") {
+    handleOperatorClick(e);
+  } else if (key === "s" || key === "n") {
+    handleSignClick();
+  } else if (key === "%") {
+    handlePercentClick();
+  } else if (key === "c" || key === "Escape") {
+    init();
+  }
+});
