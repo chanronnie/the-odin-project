@@ -146,7 +146,8 @@ function compute(a, operator, b) {
     '/': divide,
   };
   let result = mapOperation[operator](a, b);
-  if (!Number.isInteger(result)) result = parseFloat(result.toFixed(5));
+
+  if (!Number.isInteger(result) && result !== 'Math Error') result = parseFloat(result.toFixed(5));
   setResultDisplay(result);
 
   // Reset variables
@@ -174,7 +175,8 @@ function multiply(a, b) {
 function divide(a, b) {
   if (b === 0) {
     hasError = true;
-    return 'MATH ERROR';
+    displayResultEl.classList.add('error-msg');
+    return 'Math Error';
   }
   return a / b;
 }
@@ -205,10 +207,11 @@ function handlePercentClick() {
     return;
   }
 
-  // If input is something like "5+%", send an error message
+  // If input is something like "5+%", display error message
   if (firstNum && operator && !currNum) {
-    hasError = true;
     appendInputDisplay('%');
+    hasError = true;
+    displayResultEl.classList.add('error-msg');
     setResultDisplay('SYNTAX ERROR');
     return;
   }
@@ -272,6 +275,7 @@ function setResultDisplay(newText) {
 function init() {
   setInputDisplay('');
   setResultDisplay('0');
+  displayResultEl.classList.remove('error-msg');
   currNum = '';
   firstNum = 0;
   secondNum = 0;
