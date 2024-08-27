@@ -218,8 +218,8 @@ function handlePercentClick() {
 
 function handlePercentComputations() {
   // If input consists of a single number, convert it to a percentage
-  if (!firstNum && currNum) {
-    currNum = Number(currNum / 100);
+  if (currNum && !operator) {
+    currNum = Number(currNum) / 100;
     firstNum = currNum;
     setInputDisplay(firstNum);
 
