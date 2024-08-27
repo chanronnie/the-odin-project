@@ -219,14 +219,16 @@ function handlePercentClick() {
 function handlePercentComputations() {
   // If input consists of a single number, convert it to a percentage
   if (!firstNum && currNum) {
-    firstNum = Number(currNum / 100);
+    currNum = Number(currNum / 100);
+    firstNum = currNum;
     setInputDisplay(firstNum);
 
     // If input consists of 2 numbers, adjust the current number based on the percentage
   } else if (firstNum && operator && currNum) {
-    secondNum = firstNum * (Number(currNum) / 100);
-    setInputDisplay(`${firstNum}${operator}${secondNum}`);
+    currNum = firstNum * (Number(currNum) / 100);
+    secondNum = currNum;
     compute(firstNum, operator, secondNum);
+    appendInputDisplay('%');
     hasCalculated = true;
   }
 }
