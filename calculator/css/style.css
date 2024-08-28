@@ -241,9 +241,8 @@ by displaying the number buttons in descending order.
     margin-bottom: 2rem;
   }
 
-  .display .error-msg {
-    font-size: 2rem;
-    margin-bottom: 3rem;
+  .display .error-setup {
+    font-size: 2.8rem;
   }
 
   .btn {
