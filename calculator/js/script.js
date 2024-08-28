@@ -146,9 +146,8 @@ function compute(a, operator, b) {
     '/': divide,
   };
   let result = mapOperation[operator](a, b);
-
-  if (hasError) return;
-  if (!Number.isInteger(result)) result = parseFloat(result.toFixed(5));
+  if (result === 'Math Error') return;
+  result = formatResult(result);
   setResultDisplay(result);
 
   // Reset variables
@@ -156,6 +155,22 @@ function compute(a, operator, b) {
   currNum = '';
 
   return result;
+}
+
+function formatResult(result) {
+  if (Number.isInteger(result)) return result;
+
+  // Format floating-point number only
+  const maxDigits = 6;
+
+  // If result has more than 6 digits long, adjust the decimals
+  const [wholeNum, decimals] = result.toString().split('.');
+  if (result.toString().length > maxDigits) {
+    const maxDecimals = maxDigits - wholeNum.length;
+    return result.toFixed(Math.max(maxDecimals, 0));
+  }
+
+  return decimals > maxDigits ? result.toFixed(maxDigits) : result;
 }
 
 // -------------------------- //
@@ -176,7 +191,7 @@ function multiply(a, b) {
 function divide(a, b) {
   if (b === 0) {
     displayError('Math Error');
-    return;
+    return 'Math Error';
   }
   return a / b;
 }
@@ -226,10 +241,10 @@ function handlePercentComputations() {
 
     // If input consists of 2 numbers, adjust the current number based on the percentage
   } else if (firstNum && operator && currNum) {
+    appendInputDisplay('%');
     currNum = firstNum * (Number(currNum) / 100);
     secondNum = currNum;
     compute(firstNum, operator, secondNum);
-    appendInputDisplay('%');
     hasCalculated = true;
   }
 }
