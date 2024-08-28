@@ -64,6 +64,10 @@ In the [index.html](./index.html), rather than writing the buttons exactly as th
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
+## Screenshots
+
+<img src="./images/screenshots.png" alt = "screenshots" width = "750">
+
 ## 🚀Growth and Next Steps
 
 **Current Performance:** My current algorithm handles most edge cases (syntax errors, math errors, chaining calculations). However, the calculator can only compute two numbers at a time. Here are some improvements I plan to implement:
