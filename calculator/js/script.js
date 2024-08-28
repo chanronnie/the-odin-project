@@ -167,10 +167,10 @@ function formatResult(result) {
   const [wholeNum, decimals] = result.toString().split('.');
   if (result.toString().length > maxDigits) {
     const maxDecimals = maxDigits - wholeNum.length;
-    return result.toFixed(Math.max(maxDecimals, 0));
+    return parseFloat(result.toFixed(Math.max(maxDecimals, 0)));
   }
 
-  return decimals > maxDigits ? result.toFixed(maxDigits) : result;
+  return decimals > maxDigits ? parseFloat(result.toFixed(maxDigits)) : result;
 }
 
 // -------------------------- //
