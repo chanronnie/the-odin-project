@@ -21,7 +21,7 @@ The goal of this project is to build a simple calculator using JavaScript. It pe
 - Ability to `chain calculations` to use previous result
 - Decimal `.` button to create floating-point numbers
 - Sign `+/-` button to toggle the number’s sign
-- `Percent `%` button for quick percentage operations (e.g., 20 + 15% = 20 + (20 \* 0.15) = 23)
+- Percent `%` button for quick percentage operations (e.g., 20 + 15% = 20 + (20 \* 0.15) = 23)
 - `Backspace` button to erase the last input
 - Clear `AC` button to reset the app
 - Math and syntax error handling for edge cases
