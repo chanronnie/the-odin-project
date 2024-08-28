@@ -22,6 +22,7 @@
   --operator-font-color: #eeeeee;
   --operand-background-color: #686d76;
   --operand-font-color: #eeeeee;
+  --error-color: #ffaa80;
 }
 
 /* -------------------------- */
@@ -63,7 +64,7 @@ a:hover {
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: border-radius 0.3s ease;
 }
 
 .btn:hover {
@@ -71,7 +72,7 @@ a:hover {
 }
 
 .btn:active {
-  transform: translateY(2px);
+  border-radius: 25%;
 }
 
 /* -------------------------- */
@@ -122,8 +123,10 @@ a:hover {
   font-size: 2.5rem;
 }
 
-.display .error-msg {
+/* ERROR SETUP */
+.display .error-setup {
   font-size: 1.5rem;
+  color: var(--error-color);
 }
 
 /* -------------------------- */

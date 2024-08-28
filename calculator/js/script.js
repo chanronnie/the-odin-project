@@ -147,7 +147,8 @@ function compute(a, operator, b) {
   };
   let result = mapOperation[operator](a, b);
 
-  if (!Number.isInteger(result) && result !== 'Math Error') result = parseFloat(result.toFixed(5));
+  if (hasError) return;
+  if (!Number.isInteger(result)) result = parseFloat(result.toFixed(5));
   setResultDisplay(result);
 
   // Reset variables
@@ -174,9 +175,8 @@ function multiply(a, b) {
 
 function divide(a, b) {
   if (b === 0) {
-    hasError = true;
-    displayResultEl.classList.add('error-msg');
-    return 'Math Error';
+    displayError('Math Error');
+    return;
   }
   return a / b;
 }
@@ -210,9 +210,7 @@ function handlePercentClick() {
   // If input is something like "5+%", display error message
   if (firstNum && operator && !currNum) {
     appendInputDisplay('%');
-    hasError = true;
-    displayResultEl.classList.add('error-msg');
-    setResultDisplay('SYNTAX ERROR');
+    displayError('Syntax Error');
     return;
   }
 
@@ -271,11 +269,19 @@ function setResultDisplay(newText) {
   displayResultEl.textContent = newText;
 }
 
+function displayError(error) {
+  hasError = true;
+  displayInputEl.classList.add('error-setup');
+  displayResultEl.classList.add('error-setup');
+  setResultDisplay(error);
+}
+
 // FUNCTION TO RESET THE APP
 function init() {
   setInputDisplay('');
   setResultDisplay('0');
-  displayResultEl.classList.remove('error-msg');
+  displayInputEl.classList.remove('error-setup');
+  displayResultEl.classList.remove('error-setup');
   currNum = '';
   firstNum = 0;
   secondNum = 0;
